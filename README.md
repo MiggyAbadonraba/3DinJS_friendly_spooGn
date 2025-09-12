@@ -1,0 +1,1 @@
+# 3DinJS_friendly_spooGn

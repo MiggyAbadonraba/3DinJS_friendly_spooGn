@@ -1,0 +1,28 @@
+.content-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -webkit-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -moz-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    gap: 100px;
+}
+
+.content-wrap h1{
+    text-align: left;
+    line-height: 50px;
+    width: 350px;
+}
+
+.back-image {
+    background: url("images/d0881696395758a9c5e7b256d63c48df.jpg");
+    background-size: 100%, cover;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}

@@ -1,0 +1,73 @@
+.box-wrap-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.image-map {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background: url("images/icons/bxs_map.png");
+    background-size: 100%, cover;
+}
+.flex-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.flex-grid h4{
+    text-align: left;
+    color:black;
+}
+.flex-grid-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.flex-grid-items h4 {
+    margin: 0px 0px 0px 0px;
+}
+.flex-grid-items h5 {
+    margin: 0px 0px 0px 0px;
+}
+.flex-grid-items-map {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.text-align {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.button-gap {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+}
+.button-follow {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+    background-color: rgb(115, 115, 146);
+    border-radius: 15px;
+    color: #fff;
+    padding: 15px;
+}
+.button-follow:hover {
+    background-color: rgb(150, 150, 190);
+}
+.image-follower {
+    width: 64px;
+    height: 64px;
+    border-radius: 75px;
+    background: url("images/avatars/0cb994eb176919e86481961c4db808ce.jpg");
+    background-size: 100%, cover;
+}

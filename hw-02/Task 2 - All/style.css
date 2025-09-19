@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*-------------------- Первое задание --------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #232629;
+    gap: 50px;
+}
+h1 {
+    font-weight: 900;
+    max-width: 450px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+h4 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(115, 115, 146);
+}
+.box-wrap-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 50px;
+}
+.box-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 25px;
+    padding: 75px 50px 75px 50px;
+    width: 250px;
+    height: 300px;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+    box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+}
+.box-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 150px -10px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 150px -10px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 150px -10px rgba(196, 196, 196, 0.5);
+}
+.images {
+    width: 125px;
+    height: 125px;
+    border-radius: 75px;
+}
+.images.first {
+    background: url("images/avatars/8cb6908208a0893930159514862a3ab7.jpg");
+    background-size: 100%, cover;
+}
+.images.second {
+    background: url("images/avatars/0cb994eb176919e86481961c4db808ce.jpg");
+    background-size: 100%, cover;
+}
+.images.third {
+    background: url("images/avatars/a63854036672e4ed5557a0e3297db59d.jpg");
+    background-size: 100%, cover;
+}
+/*-------------------- Второе задание --------------------*/
+.box-wrap-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+.image-map {
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background: url("images/icons/bxs_map.png");
+    background-size: 100%, cover;
+}
+.flex-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.flex-grid h4 {
+    text-align: left;
+    color: black;
+}
+.flex-grid-items {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.flex-grid-items h4 {
+    margin: 0px 0px 0px 0px;
+}
+.flex-grid-items h5 {
+    margin: 0px 0px 0px 0px;
+}
+.flex-grid-items-map {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.text-align {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.button-gap {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+}
+.button-follow {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+    background-color: rgb(115, 115, 146);
+    border-radius: 15px;
+    color: #fff;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+.button-follow:hover {
+    transform: scale(1.1);
+    background-color: rgb(150, 150, 190);
+}
+.image-follower {
+    width: 64px;
+    height: 64px;
+    border-radius: 75px;
+    background: url("images/avatars/0cb994eb176919e86481961c4db808ce.jpg");
+    background-size: 100%, cover;
+}
+/*-------------------- Третье задание --------------------*/
+h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.flex-scroll {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.flex-scroll h4 {
+    color: black;
+}
+.buttons-scroll {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+.buttons-scroll:hover {
+    background-color: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+.buttons-scroll:active {
+    transform: translateY(-50%) scale(0.95);
+}
+.right-arrow {
+    border-radius: 15px;
+    background: url("images/icons/buttons/arrow-right-standard.png");
+    background-size: 100%, cover;
+    right: 30px;
+}
+.right-arrow:hover {
+    background: url("images/icons/buttons/arrow-right-hover.png");
+    background-size: 100%, cover;
+}
+.right-arrow:active {
+    background: url("images/icons/buttons/arrow-right-press.png");
+    background-size: 100%, cover;
+}
+.left-arrow {
+    border-radius: 15px;
+    background: url("images/icons/buttons/arrow-left-standard.png");
+    background-size: 100%, cover;
+    left: 30px;
+}
+.left-arrow:hover {
+    background: url("images/icons/buttons/arrow-left-hover.png");
+    background-size: 100%, cover;
+}
+.left-arrow:active {
+    background: url("images/icons/buttons/arrow-left-press.png");
+    background-size: 100%, cover;
+}
+.row-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px 15px 30px 15px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+}
+.row-post {
+    display: flex;
+    align-self: center;
+    gap: 30px;
+}
+.image-team {
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    background: url("images/avatars/278608170a18c6d76858ed3dcaf25a1e.jpg");
+    background-size: 100%, cover;
+}
+.image-post-1 {
+    width: 32px;
+    height: 32px;
+    background: url("images/icons/logos_html-5.png");
+    background-size: 100%, cover;
+}
+.image-post-2 {
+    width: 32px;
+    height: 32px;
+    background: url("images/icons/logos_pinterest.png");
+    background-size: 100%, cover;
+}
+.image-post-3 {
+    width: 32px;
+    height: 32px;
+    background: url("images/icons/ri_vk-fill.png");
+    background-size: 100%, cover;
+}
+.image-post-4 {
+    width: 32px;
+    height: 32px;
+    background: url("images/icons/logos_css-3.png");
+    background-size: 100%, cover;
+}
+.button-view-team {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+    background-color: rgb(115, 115, 146);
+    border-radius: 15px;
+    color: #fff;
+    padding: 15px;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+.button-view-team:hover {
+    transform: scale(1.1);
+    background-color: rgb(150, 150, 190);
+}
+.button-view-team::after {
+    content: "→";
+}
+/*-------------------- Четвёртое задание --------------------*/
+.friends {
+    grid-template-columns: repeat(2, 1fr);
+}
+.box-wrap-2 h1 {
+    white-space: nowrap;
+    text-align: left;
+}
+.image-friend {
+    width: 96px;
+    height: 96px;
+    border-radius: 75px;
+    background: url("gifs/1757003605_new_etos-special-ezgif.com-optimize.gif");
+    background-size: 100%, cover;
+}
+.friends-items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 50px 30px 50px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+}
+.text-align-friends {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.point-menu {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 75px;
+    background: url("images/icons/buttons/point-menu.png");
+    background-size: 100%, cover;
+}
+/*-------------------- Пятое задание --------------------*/
+.theme-switcher {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.theme-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: fit-content;
+    background-size: 100%, cover;
+}
+
+.theme-btn:hover {
+    transform: scale(1.05);
+}
+.theme-btn:active {
+    transform: scale(0.95);
+}
+
+.theme-icon {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -webkit-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 50px -10px rgba(196, 196, 196, 0.5);
+    transition: all 0.3s ease;
+}
+
+.sun-icon {
+    background: url("images/icons/theme/light-theme-standard.png")
+        center/contain no-repeat;
+}
+.sun-icon:hover {
+    background: url("images/icons/theme/light-theme-hover.png") center/contain
+        no-repeat;
+}
+.sun-icon:active {
+    background: url("images/icons/theme/light-theme-Press.png") center/contain
+        no-repeat;
+}
+
+.moon-icon {
+    background: url("images/icons/theme/dark-theme-standard.png") center/contain
+        no-repeat;
+}
+.moon-icon:hover {
+    background: url("images/icons/theme/dark-theme-hover.png") center/contain
+        no-repeat;
+}
+.moon-icon:active {
+    background: url("images/icons/theme/dark-theme-press.png") center/contain
+        no-repeat;
+}
+
+/* Стили для тёмной темы */
+body.dark-theme {
+    background: #121212;
+    color: #e6e6e6;
+}
+
+body.dark-theme .box-item,
+body.dark-theme .button-gap,
+body.dark-theme .row-item,
+body.dark-theme .friends-items {
+    background-color: #1e1e1e;
+    color: #e6e6e6;
+    box-shadow: 0px 0px 50px -10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme h1,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5 {
+    color: #e6e6e6;
+}
+
+body.dark-theme .button-follow,
+body.dark-theme .button-view-team {
+    background-color: #df5d84;
+}
+
+body.dark-theme .button-follow:hover,
+body.dark-theme .button-view-team:hover {
+    background-color: #ff3964;
+}
+
+body.dark-theme .theme-btn {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+}
+
+body.dark-theme .image-post-1 {
+    background: url("images/icons/logos_html-5-dark.png");
+    background-size: 100%, cover;
+}
+body.dark-theme .image-post-3 {
+    background: url("images/icons/ri_vk-fill-dark.png");
+    background-size: 100%, cover;
+}
+body.dark-theme .image-post-4 {
+    background: url("images/icons/logos_css-3-dark.png");
+    background-size: 100%, cover;
+}
+body.dark-theme .image-map,
+body.dark-theme .point-menu,
+body.dark-theme .right-arrow,
+body.dark-theme .left-arrow {
+    filter: invert(1) brightness(2);
+}
+
+/* Анимация переключения темы */
+body {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.image-map,
+.image-post-1,
+.image-post-2,
+.image-post-3,
+.image-post-4,
+.point-menu,
+.right-arrow,
+.left-arrow,
+.box-item,
+.button-gap,
+.row-item,
+.friends-items {
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*-------------------- Первое задание --------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 50px;
+    min-height: 200vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+    gap: 200px;
+}
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 900;
+    font-size: 48px;
+}
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -webkit-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -moz-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    gap: 25px;
+}
+.centered h1 {
+    font-weight: 900;
+    font-size: 48px;
+}
+.centered.second {
+    align-items: flex-start;
+    width: fit-content;
+    padding: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(107, 107, 107, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(107, 107, 107, 0.5);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(107, 107, 107, 0.5);
+    gap: 25px;
+}
+
+.text-wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    width: 450px;
+}
+
+.buttons-lower {
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 25px;
+}
+
+.button-colored {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: left;
+    background-color: rgb(75, 75, 100);
+    border-radius: 15px;
+    color: #fff;
+    padding: 15px;
+    transition: all 0.3s ease;
+}
+.button-colored:hover {
+    transform: scale(1.1);
+    background-color: rgb(98, 98, 197);
+}
+.button-colored:active {
+    transform: scale(0.95);
+    background-color: rgb(41, 41, 78);
+}
+.button-colored::after {
+    padding-left: 13px;
+    content: "→";
+}
+.button-colored.bright {
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    outline: 2px solid rgb(75, 75, 100);
+    outline-offset: -2px;
+    color: rgb(75, 75, 100);
+}
+.button-colored.bright:hover {
+    background-color: rgb(98, 98, 197);
+    outline: 0px solid;
+    color: rgb(255, 255, 255);
+}
+.button-colored.bright:active {
+    background-color: rgb(41, 41, 78);
+    outline: 2px solid rgb(41, 41, 78);
+    outline-offset: -2px;
+    color: rgb(255, 255, 255);
+}
+.button-colored.bright::after {
+    padding-left: 0px;
+    content: "";
+}
+/*-------------------- Второе задание --------------------*/
+.row-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -webkit-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -moz-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    gap: 150px;
+}
+.row-content h1 {
+    text-align: left;
+    line-height: 50px;
+    width: 350px;
+}
+.centered.second {
+    align-items: flex-start;
+    width: fit-content;
+    padding: 0px;
+    box-shadow: 0px 0px 0px 0px rgba(107, 107, 107, 0.5);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(107, 107, 107, 0.5);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(107, 107, 107, 0.5);
+    gap: 25px;
+}
+.text-wrap.second {
+    text-align: left;
+}
+/*-------------------- Третье задание --------------------*/
+.content-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -webkit-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    -moz-box-shadow: 5px 5px 107px -10px rgba(107, 107, 107, 0.5);
+    gap: 100px;
+}
+.content-wrap h1{
+    text-align: left;
+    line-height: 50px;
+    width: 350px;
+}
+.back-image {
+    background: url("images/d0881696395758a9c5e7b256d63c48df.jpg");
+    background-size: 100%, cover;
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+}
+/*-------------------- Четвёртое задание --------------------*/
+
+footer {
+    background-color: #fff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #eee;
+    width: 50%;
+}
+
+.footer-align {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-align.columns {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 150px;
+    gap: 8px;
+}
+
+.footer-logo p {
+    align-self: flex-start;
+    max-width: 200px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.footer-column h4 {
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #222;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #000;
+}
+
+.footer-image {
+    background: url("images/c5c40c7c7daa920192c86c3c05e16e5e.jpg");
+    background-size: 100%, cover;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+.copyright {
+    align-self: flex-start;
+    text-align: left;
+    font-size: 12px;
+    color: #777;
+    margin-top: 20px;
+}

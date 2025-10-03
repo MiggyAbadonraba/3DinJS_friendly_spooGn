@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МИЭТ - Практические задания JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="console-wrapper">
+            <div class="console-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="control close"></span>
+                        <span class="control minimize"></span>
+                        <span class="control maximize"></span>
+                    </div>
+                    <span class="terminal-title">ЧТО? Не понял....exe</span>
+                </div>
+                <div id="terminal-content" class="terminal-content">
+                    <div class="command-line">
+                        <span class="prompt">ghost@no-ne-hollow-gnest:~$</span>
+                        <span class="command">node древние_задания.js</span>
+                    </div>
+                    <div id="output" class="output"></div>
+                    <div class="command-line current-line">
+                        <span class="prompt">ghost@no-ne-hollow-gnest:~$</span>
+                        <span class="cursor">▋</span>
+                    </div>
+                </div>
+            </div>
+            <button onclick="runAllTasks()" class="run-btn">Потрогать древние цифровые руны</button>
+            <div id="bonus-buttons" class="bonus-buttons" style="display: none;">
+                <button onclick="clearConsole()" class="bonus-btn clear-btn">*Oughsff* эти скрижали тырнетные</button>
+                <button onclick="showChristopher()" class="bonus-btn joke-btn">*Debug* Найти Кристофера...</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

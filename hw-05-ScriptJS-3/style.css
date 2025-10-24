@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.console-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.console-terminal {
+    background: #0a0a0a;
+    border-radius: 16px;
+    width: 100%;
+    height: 640px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 
+        0px 8px 32px rgba(0, 0, 0, 0.8),
+        0px 2px 8px rgba(0, 0, 0, 0.6),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    border: 1px solid #333333;
+}
+
+.terminal-header {
+    background: #1a1a1a;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #333333;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.control.close {
+    background: #ff5f57;
+}
+
+.control.close:hover {
+    background: #ff3b30;
+    transform: scale(1.1);
+}
+
+.control.minimize {
+    background: #ffbd2e;
+}
+
+.control.minimize:hover {
+    background: #ffa500;
+    transform: scale(1.1);
+}
+
+.control.maximize {
+    background: #28c940;
+}
+
+.control.maximize:hover {
+    background: #00c300;
+    transform: scale(1.1);
+}
+
+.terminal-title {
+    color: #cccccc;
+    font-size: 14px;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.terminal-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background: #000000;
+    font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.command-line {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    color: #00ff88;
+    margin-right: 12px;
+    font-weight: 600;
+}
+
+.command {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.output {
+    margin: 20px 0;
+}
+
+.output-line {
+    margin-bottom: 8px;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.current-line {
+    margin-top: 20px;
+}
+
+.cursor {
+    animation: blink 1.5s infinite;
+    color: #00ff88;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+/* Стили для кнопок с акцентными цветами */
+.run-btn {
+    background: #0077cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 16px 48px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0px 4px 16px rgba(0, 119, 204, 0.4),
+        0px 2px 8px rgba(0, 119, 204, 0.3);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #0077cc;
+}
+
+.run-btn:hover {
+    transform: translateY(-2px);
+    background: #00aaff;
+    box-shadow: 
+        0px 6px 20px rgba(0, 170, 255, 0.5),
+        0px 3px 12px rgba(0, 170, 255, 0.4);
+}
+
+.run-btn:active {
+    transform: translateY(0);
+}
+
+.run-btn.running {
+    background: #005599;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.run-btn.running:hover {
+    background: #005599;
+    box-shadow: 
+        0px 4px 16px rgba(0, 119, 204, 0.4),
+        0px 2px 8px rgba(0, 119, 204, 0.3);
+}
+
+/* Бонусные кнопки */
+.bonus-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.bonus-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear-btn {
+    background: #00aa66;
+    color: #ffffff;
+    border: 1px solid #00aa66;
+    box-shadow: 0px 2px 8px rgba(0, 170, 102, 0.3);
+}
+
+.clear-btn:hover {
+    background: #00ff88;
+    border-color: #00ff88;
+    color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(0, 255, 136, 0.4);
+}
+
+.joke-btn {
+    background: #cc3333;
+    color: #ffffff;
+    border: 1px solid #cc3333;
+    box-shadow: 0px 2px 8px rgba(204, 51, 51, 0.3);
+}
+
+.joke-btn:hover {
+    background: #ff4444;
+    border-color: #ff4444;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 12px rgba(255, 68, 68, 0.4);
+}
+
+/* Стили для скроллбара */
+.terminal-content {
+    scroll-behavior: smooth;
+}
+
+.terminal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-content::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+.terminal-content::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.terminal-content::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+/* Обновленные типы сообщений */
+.info { 
+    color: #ffffff;
+    background: rgba(40, 40, 40, 0.9);
+    border-left: 3px solid #cccccc;
+}
+
+.success { 
+    color: #00ff88;
+    background: rgba(0, 255, 136, 0.1);
+    border-left: 3px solid #00ff88;
+    font-weight: 500;
+}
+
+.warning { 
+    color: #ffbd2e;
+    background: rgba(255, 189, 46, 0.1);
+    border-left: 3px solid #ffbd2e;
+}
+
+.error { 
+    color: #ff4444;
+    background: rgba(255, 68, 68, 0.1);
+    border-left: 3px solid #ff4444;
+}
+
+.system { 
+    color: #00aaff;
+    background: rgba(0, 170, 255, 0.1);
+    border-left: 3px solid #00aaff;
+    font-weight: 600;
+}
+
+.object { 
+    color: #aa66ff;
+    background: rgba(170, 102, 255, 0.1);
+    border-left: 3px solid #aa66ff;
+}
+
+.code-block {
+    background: rgba(20, 20, 20, 0.9);
+    border: 1px solid #333333;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 8px 0;
+    font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    color: #ff9966;
+}
+
+/* Новые стили для разделителей и группировки */
+.task-group {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 10px;
+    border: 1px solid #333333;
+}
+
+.task-header {
+    color: #00aaff;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333333;
+    font-size: 15px;
+}
+
+.full-separator {
+    color: #444444;
+    background: rgba(68, 68, 68, 0.2);
+    text-align: center;
+    padding: 8px 0;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+    letter-spacing: 2px;
+    border: 1px solid #333333;
+}
+
+.section-separator {
+    color: #555555;
+    background: rgba(85, 85, 85, 0.1);
+    text-align: center;
+    padding: 6px 0;
+    margin: 12px 0;
+    border-radius: 3px;
+    font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+    font-size: 12px;
+}
+
+/* Стиль для гифки Кристофера */
+.christopher-gif {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(40, 40, 40, 0.8);
+    border-radius: 10px;
+    border: 2px solid #00aaff;
+}
+
+.christopher-gif img {
+    max-width: 300px;
+    border-radius: 8px;
+    border: 1px solid #444444;
+}
+
+.christopher-text {
+    color: #ffbd2e;
+    font-weight: 600;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 16px;
+    }
+    
+    .console-terminal {
+        height: 500px;
+        border-radius: 12px;
+    }
+    
+    .terminal-header {
+        padding: 16px 20px;
+    }
+    
+    .terminal-content {
+        padding: 20px;
+    }
+    
+    .run-btn {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+    
+    .bonus-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Figma-like hover effects */
+.console-terminal {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.console-terminal:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0px 12px 40px rgba(0, 0, 0, 0.8),
+        0px 4px 16px rgba(0, 0, 0, 0.6),
+        inset 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+.run-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.run-btn:hover::before {
+    left: 100%;
+}
